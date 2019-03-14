@@ -19,13 +19,11 @@ erl_crash.dump
 # Also ignore archive artifacts (built via "mix archive.build").
 *.ez
 
+/client/src/assets/stylesheets/css
+/client/build
+
 # Ignore package tarball (built via "mix hex.build").
 cars_app-*.tar
-
-# Since we are building assets from assets/,
-# we ignore priv/static. You may want to comment
-# this depending on your deployment strategy.
-/priv/static/
 
 # Files matching config/*.secret.exs pattern contain sensitive
 # data and you should not commit them into version control.
