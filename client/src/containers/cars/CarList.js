@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import gql from 'graphql-tag'
+import { Link } from 'react-router-dom'
 import { Query } from 'react-apollo'
 
 const GET_CARS_LIST = gql`
@@ -27,7 +28,9 @@ class CarList extends Component {
               <div className='cars'>
                 {data.cars.map(car => (
                   <div key={car.id} className='car'>
-                    <h2 className='title is-4'>{car.model}</h2>
+                    <Link to={`/cars/${car.id}`} className="header">
+                      <h2 className='title is-4'>{car.model}</h2>
+                    </Link>
                     <h3>{car.description}</h3>
                   </div>
                     ))}

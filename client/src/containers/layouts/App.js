@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 import Header from './Header'
 import NotFound from '../../components/NotFound'
 import CarList from '../../containers/cars/CarList'
+import Car from '../../containers/cars/Car'
 
 import '../../assets/stylesheets/css/app.css'
 
@@ -19,6 +20,7 @@ export default class App extends Component {
                 <div className='column is-offset-2 is-8'>
                   <Switch>
                     <Route path='/' exact component={CarList} />
+                    <Route path='/cars/:id' component={Car} />
                     <Route component={NotFound} />
                   </Switch>
                 </div>
