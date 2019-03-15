@@ -8,6 +8,5 @@ defmodule CarsApp.Repo.Migrations.CreateCars do
 
       timestamps()
     end
-
   end
 end

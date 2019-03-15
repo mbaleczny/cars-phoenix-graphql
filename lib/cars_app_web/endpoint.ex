@@ -28,7 +28,7 @@ defmodule CarsAppWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
 
-  if Mix.env == :dev do
+  if Mix.env() == :dev do
     plug CORSPlug, origin: "http://localhost:3000"
   end
 

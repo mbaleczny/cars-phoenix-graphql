@@ -101,4 +101,22 @@ defmodule CarsApp.Vehicles do
   def change_car(%Car{} = car) do
     Car.changeset(car, %{})
   end
+
+  def search_cars(query, nil), do: query
+
+  @doc """
+  Returns query for the list of cars witch matched keywords.
+
+  ## Examples
+
+      iex> search_cars(query, keywords)
+      %Ecto.Query{}
+
+  """
+  def search_cars(query, keywords) do
+    from c in query,
+      where:
+        ilike(c.model, ^"%#{keywords}%") or
+          ilike(c.description, ^"%#{keywords}%")
+  end
 end
