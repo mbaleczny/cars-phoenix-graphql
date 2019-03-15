@@ -1,0 +1,13 @@
+.cars {
+  margin-botton: 40px;
+
+  .car {
+    maring-bottom: 30px;
+    .title a {
+      color: $dark;
+      &:hover {
+        color: $primary
+      }
+    }
+  }
+}

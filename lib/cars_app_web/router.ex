@@ -16,7 +16,9 @@ defmodule CarsAppWeb.Router do
   scope "/" do
     pipe_through :api
 
-    forward "/graphql", Absinthe.Plug, schema: CarsAppWeb.Graph.Schema
+    forward "/graphql", Absinthe.Plug,
+      schema: CarsAppWeb.Graph.Schema,
+      json_codec: Phoenix.json_library()
 
     if Mix.env == :dev do
       forward "/graphiql", Absinthe.Plug.GraphiQL,

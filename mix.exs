@@ -44,7 +44,9 @@ defmodule CarsApp.MixProject do
 
       # GraphQL
       {:absinthe, "~> 1.4"},
-      {:absinthe_plug, "~> 1.4"}
+      {:absinthe_plug, "~> 1.4"},
+
+      {:cors_plug, "~> 2.0"}
     ]
   end
 
