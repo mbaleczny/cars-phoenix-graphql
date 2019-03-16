@@ -1,19 +1,10 @@
 import React, { Component } from 'react'
 import { Query } from 'react-apollo'
-import gql from 'graphql-tag'
 
 import SearchForm from './_SearchForm'
 import ListCars from './_ListCars'
 
-const GET_CARS_LIST = gql`
-  query cars($keywords: String) {
-    cars(keywords: $keywords) {
-      id
-      model
-      description
-    }
-  }
-`
+import { GET_CARS_LIST } from '../../queries/cars.js'
 
 class SearchCar extends Component {
   render () {
