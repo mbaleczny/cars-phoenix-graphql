@@ -19,8 +19,8 @@ erl_crash.dump
 # Also ignore archive artifacts (built via "mix archive.build").
 *.ez
 
-/client/src/assets/stylesheets/css
-/client/build
+/priv/static
+/assets/node_modules
 
 # Ignore package tarball (built via "mix hex.build").
 cars_app-*.tar

@@ -16,7 +16,7 @@ const GET_CAR = gql`
 export default class Car extends Component {
 
   render () {
-    console.log(this.props)
+    // console.log(this.props)
     const { id } = this.props.match.params;
 
     return (

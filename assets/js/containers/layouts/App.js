@@ -7,8 +7,6 @@ import CarList from '../cars/CarList'
 import Car from '../cars/Car'
 import SearchCar from '../cars/SearchCar'
 
-import '../../assets/stylesheets/css/app.css'
-
 export default class App extends Component {
   render () {
     return (
