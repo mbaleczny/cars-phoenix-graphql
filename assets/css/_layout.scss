@@ -1,8 +1,24 @@
-$primary: $blue;
+$primary: $dark;
 
 header,
-.container nav.navbar {
+nav.navbar {
   background-color: $primary;
+}
+
+.header, .container {
+  @include from($tablet) {
+    width: 60vw;
+  }
+
+  width: 100%;
+  margin: 0 auto;
+}
+
+.burger {
+  color: white;
+  &:hover {
+    color: white;
+  }
 }
 
 a.navbar-item,
@@ -20,4 +36,9 @@ a.navbar-item,
   .cars-logo {
     max-height: 38px;
   }
+}
+
+.navbar-menu {
+  background-color: $dark;
+  color: white;
 }
